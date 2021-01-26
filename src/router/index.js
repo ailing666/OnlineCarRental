@@ -8,13 +8,19 @@ const routes = [
   {
     path: "/",
     name: "Index",
-    component: Index
+    component: Index,
+    children: [{
+        path: "/user",
+        name: "User",
+        component: () =>
+          import(/* webpackChunkName: "about" */ "../views/user/index.vue")
+    }]
   },{
     path: "/index",
     name: "Index",
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/index/index.vue")
-  }
+  },
 ];
 
 const router = new VueRouter({
