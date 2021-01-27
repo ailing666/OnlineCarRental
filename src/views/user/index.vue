@@ -1,11 +1,21 @@
 <template>
-  <div class="user">user</div>
+  <div class="user" :class="{'showUser' : showUser}">user</div>
 </template>
 
 <script>
 export default {
-  name:'User'
-
+  name:'User',
+  data() {
+    return {
+      showUser: true,
+    }
+  },
+  watch: {
+    '$route'(newV) {
+      const routerName = newV.name
+      this.showUser = routerName !== 'Index'
+    }
+  }
 }
 </script>
 
@@ -19,4 +29,14 @@ export default {
   width: 410px;
   background-color: #32383c;
 }
+ .showUser {
+    animation: userSlide .5s;
+ }
+
+ @keyframes userSlide
+{
+    from {right: -410px;}
+    to {right:0;}
+}
+
 </style>
