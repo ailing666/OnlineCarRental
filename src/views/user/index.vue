@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name:'User',
+  name:'user',
   data() {
     return {
       showUser: true,
@@ -13,7 +13,7 @@ export default {
   watch: {
     '$route'(newV) {
       const routerName = newV.name
-      this.showUser = routerName !== 'Index'
+      this.showUser = routerName === 'User'
     }
   }
 }
@@ -23,20 +23,21 @@ export default {
 .user {
   position: fixed;
   top: 0;
-  bottom: 0;
   right: 0;
-  z-index: 101;
+  bottom: 0;
   width: 410px;
+  z-index: 101;
   background-color: #32383c;
 }
- .showUser {
-    animation: userSlide .5s;
- }
 
- @keyframes userSlide
-{
-    from {right: -410px;}
-    to {right:0;}
+.showUser {
+  animation: userSlide .5s;
 }
 
+// userSlide 滑动动画
+@keyframes userSlide
+{
+  from { right: -410px }
+  to { right: 0 }
+}
 </style>

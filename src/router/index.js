@@ -19,13 +19,13 @@ const routes = [
         path: "/user",
         name: "User",
         component: () =>
-          import(/* webpackChunkName: "about" */ "../views/user/index.vue")
+          import("@/views/user/index.vue")
     }]
   },{
     path: "/index",
     name: "Index",
     component: () =>
-      import(/* webpackChunkName: "about" */ "../views/index/index.vue")
+      import("@/views/index/index.vue")
   },
 ];
 

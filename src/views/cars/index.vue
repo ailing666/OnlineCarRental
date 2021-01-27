@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: 'Cars',
+  name: 'cars',
   methods: {
     // 路由跳转至 “我的”
     toUser(){

@@ -1,22 +1,23 @@
 <template>
   <div class="index">
-    <Map></Map>
-    <Cars></Cars>
+    <!-- 地图模块 -->
+    <a-map></a-map>
+    <!-- 汽车信心 -->
+    <cars></cars>
     <router-view>
-      <User ></User>
+      <!-- 用户中心 -->
+      <user></user>
     </router-view>
   </div>
 </template>
 
 <script>
-import Map from '@/views/aMap/index.vue'
-import Cars from '@/views/cars/index.vue'
-import User from '@/views/user/index.vue'
+import aMap from '@/views/aMap/index.vue'
+import cars from '@/views/cars/index.vue'
+import user from '@/views/user/index.vue'
 export default {
   name:'index',
-  components: { Map, Cars, User },
-
-
+  components: { aMap, cars, user },
 }
 </script>
 
