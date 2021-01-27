@@ -5,7 +5,7 @@
       <li><i class="icon-search"></i></li>
       <li><a href="#" class="cars-select-btn">选择车辆</a></li>
       <li><i class="icon-location"></i></li>
-      <li><i class="icon-user"></i></li>
+      <li><i class="icon-user" @click="toUser"></i></li>
     </ul>
   </div>
 </template>
@@ -13,6 +13,14 @@
 <script>
 export default {
   name: 'naveBar',
+  methods: {
+    // 路由跳转至 “我的”
+    toUser(){
+      this.$router.push({
+        name:'User'
+      })
+    }
+  }
 }
 </script>
 

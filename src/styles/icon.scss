@@ -1,13 +1,13 @@
 i[class^=icon] { // 获取类名开头为 icon 的i标签
   display: inline-block;
-  background-repeat: no-repeat;
   width: 44px; 
   height: 44px;
   margin: 0 17px;
-  vertical-align: middle;
   cursor: pointer;
-  background-color: $color-main;
   border-radius: 100px;
+  vertical-align: middle;
+  background-color: $color-main;
+  background-repeat: no-repeat;
 }
 .icon-help { background-image: url(~@/assets/images/icon/icon-help.png); }
 .icon-search { background-image: url(~@/assets/images/icon/icon-search.png); }
