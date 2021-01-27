@@ -7,15 +7,14 @@ export default {
   name:'user',
   data() {
     return {
-      showUser: true,
     }
   },
-  watch: {
-    '$route'(newV) {
-      const routerName = newV.name
-      this.showUser = routerName === 'User'
+  computed: {
+    showUser() {
+      const routerName = this.$route.name
+      return routerName === 'User'
     }
-  }
+  },
 }
 </script>
 
