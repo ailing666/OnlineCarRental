@@ -8,6 +8,8 @@
       <!-- 用户中心 -->
       <user></user>
     </router-view>
+    <!-- 导航按钮 -->
+    <nav-bar></nav-bar>
   </div>
 </template>
 
@@ -15,9 +17,11 @@
 import aMap from '@/views/aMap/index.vue'
 import cars from '@/views/cars/index.vue'
 import user from '@/views/user/index.vue'
+import navBar from '@/components/navBar/index.vue'
+
 export default {
   name:'index',
-  components: { aMap, cars, user },
+  components: { aMap, cars, user, navBar },
 }
 </script>
 

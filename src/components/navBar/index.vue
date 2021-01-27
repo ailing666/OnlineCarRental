@@ -1,0 +1,45 @@
+<template>
+  <div class="nav-bar">
+    <ul>
+      <li><i class="icon-help"></i></li>
+      <li><i class="icon-search"></i></li>
+      <li><a href="#" class="cars-select-btn">选择车辆</a></li>
+      <li><i class="icon-location"></i></li>
+      <li><i class="icon-user"></i></li>
+    </ul>
+  </div>
+</template>
+
+<script>
+export default {
+  name: 'naveBar',
+}
+</script>
+
+<style lang="scss" scoped>
+.nav-bar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 86px;
+  z-index: 11;
+  text-align: center;
+  
+  li {
+    display: inline-block;
+
+    .cars-select-btn {
+      display: block;
+      width: 240px;
+      height: 84px;
+      color: $color-white;
+      margin: 0 17px;
+      font-size: $f26;
+      line-height: 84px;
+      text-align: center;
+      border-radius: 100px;
+      background-color: $color-main;
+    }
+  }
+}
+</style>

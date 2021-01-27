@@ -1,5 +1,7 @@
 <template>
-  <div class="cars"><span @click="toUser">cars</span></div>
+  <div class="cars">
+    <span @click="toUser">cars</span>
+  </div>
 </template>
 
 <script>
@@ -17,9 +19,6 @@ export default {
 </script>
 
 <style lang="scss">
-.cars {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
+@import './cars.scss'
+
 </style>
