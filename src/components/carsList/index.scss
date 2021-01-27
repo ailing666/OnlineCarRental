@@ -1,0 +1,116 @@
+.cars-list {
+  .cars-item {
+    height: 257px;
+    width: 506px;
+    margin: auto;
+    padding: 30px 30px 0;
+    border-radius: 24px;
+    background-color: $color-white;
+    @include webkit(box-shadow, 0 0 18px 0 $color-shadow-2);
+    @include webkit(box-sizing, border-box);
+    // 头部
+    header {
+      @extend %clearfix;
+
+      .cars-logo {
+        float: left;
+        height: 34px;
+
+        img {
+          display: inline-block;
+          height: 34px;
+          margin-right: 10px;
+          vertical-align: middle;
+        } 
+
+        span { font-size: $f16; }
+      }
+
+      .cars-name {
+        float: right;
+        line-height: 34px;
+        opacity: .5;
+      }
+    }
+
+    // 内容
+    .cars-content {
+      display: flex;
+      align-items: center;
+      height: 140px;
+      // 车辆信息
+      .cars-info {
+        h4 {
+          font-size: $f18;
+          text-align: left;
+          margin-bottom: 6px;
+        }
+
+        section {
+          display: flex;
+
+          .cars-electric {
+            li {
+              display: inline-block;
+              width: 7px;
+              height: 24px;
+              margin-right: 3px;
+              border-radius: 100px;
+              background-color: $color-border1;
+            }
+            @for $i from 1 through 10 {
+              &.active-li-#{$i}{
+                  li:nth-child(-n+#{$i}) { @include webkitA(background, linear-gradient(#17a8fa, #108dd9)); }
+              }
+            }
+          }
+  
+          .cars-distance {
+            font-size: $f22;
+            font-weight: 700;
+
+            span {
+              font-size: $f14;
+              font-weight: 400;
+              margin: 0 4px;
+
+              &:first-child {
+                opacity: .6;
+              }
+            }
+          }
+        }
+      }
+      // 车图片
+      img {
+        height: 120px;
+      }
+    }
+
+    // 底部
+    footer {
+      .parking-link {
+        display: block;
+        position: relative;
+        color: $color-main;
+        text-align: left;
+        line-height: 48px;
+        opacity: .8;
+        border-top: 1px solid $color-border1;
+        
+        &:after {
+          content: "";
+          position: absolute;
+          right: 0;
+          top: 50%;
+          width: 8px;
+          height: 8px;
+          margin-top: -8px;
+          border-top: 1px solid $color-border2;
+          border-right: 1px solid $color-border2;
+          @include webkit(transform, rotate(45deg));
+        }
+      }
+    }
+  }
+}

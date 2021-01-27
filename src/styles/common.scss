@@ -1,6 +1,42 @@
 // 颜色变量
 $color-main: #34393f;
 $color-white: #fff;
+$color-border1: #e1e1e1;
+$color-border2: #d6d7d9;
+
+$color-shadow-2: rgba(0, 0, 0, .2);
 
 // 字体大小变量
+$f16: 16px;
+$f14: 14px;
+$f18: 18px;
+$f22: 22px;
 $f26: 26px;
+/* 清除浮动 */
+%clearfix {
+  &:after {
+      clear: both;
+      content: '.';
+      display: block;
+      height: 0;
+      line-height: 0;
+      overflow: hidden;
+  }
+  *height: 1%;
+}
+
+@mixin webkit($type, $value) {
+  -webkit-#{$type}: $value;
+  -moz-#{$type}: $value;
+  -ms-#{$type}: $value;
+  -o-#{$type}: $value;
+  #{$type}: $value;
+}
+
+@mixin webkitA($type, $value) {  // A => after
+  #{$type}: -webkit-#{$value};
+  #{$type}: -moz-#{$value};
+  #{$type}: -ms-#{$value};
+  #{$type}: -o-#{$value};
+  #{$type}: $value;
+}
