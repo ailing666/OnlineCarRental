@@ -4,6 +4,12 @@ import Index from '@/views/index/index.vue'
 
 Vue.use(VueRouter);
 
+// 解决路由地址重复的报错问题
+const originalPush = VueRouter.prototype.push
+   VueRouter.prototype.push = function push(location) {
+   return originalPush.call(this, location).catch(err => err)
+}
+
 const routes = [
   {
     path: "/",
