@@ -3,7 +3,7 @@
     <ul>
       <li><i class="icon-help"></i></li>
       <li><i class="icon-search"></i></li>
-      <li><a href="#" class="cars-select-btn">选择车辆</a></li>
+      <li><a href="javascript: void(0);" class="cars-select-btn">选择车辆</a></li>
       <li><i class="icon-location"></i></li>
       <li><i class="icon-user" @click="toUser"></i></li>
     </ul>
@@ -40,11 +40,11 @@ export default {
       display: block;
       width: 240px;
       height: 84px;
-      color: $color-white;
       margin: 0 17px;
       font-size: $f26;
       line-height: 84px;
       text-align: center;
+      color: $color-white;
       border-radius: 100px;
       background-color: $color-main;
     }

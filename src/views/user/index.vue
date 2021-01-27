@@ -34,8 +34,7 @@ export default {
 }
 
 // userSlide 滑动动画
-@keyframes userSlide
-{
+@keyframes userSlide {
   from { right: -410px }
   to { right: 0 }
 }
