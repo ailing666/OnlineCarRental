@@ -1,17 +1,39 @@
 <template>
   <div class="cars">
-    <cars-list></cars-list>
+  <swiper class="cars-swiper-wrap" :options="swiperOption">
+    <swiper-slide> <cars-list></cars-list> </swiper-slide>
+    <swiper-slide> <cars-list></cars-list> </swiper-slide>
+    <swiper-slide> <cars-list></cars-list> </swiper-slide>
+    <swiper-slide> <cars-list></cars-list> </swiper-slide>
+    <swiper-slide> <cars-list></cars-list> </swiper-slide>
+    <swiper-slide> <cars-list></cars-list> </swiper-slide>
+    <div class="swiper-button-prev" slot="button-prev"></div>
+    <div class="swiper-button-next" slot="button-next"></div>
+  </swiper>
   </div>
 </template>
 
 <script>
 import carsList from '@/components/carsList/index.vue'
+import { Swiper, SwiperSlide } from 'vue-awesome-swiper'
+  import 'swiper/css/swiper.css'
+
 export default {
   name: 'cars',
-  components: { carsList },
-  methods: {
-
-  }
+  components: { carsList, Swiper, SwiperSlide },
+   title: 'Progress pagination',
+       data() {
+      return {
+        swiperOption: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+          }
+        }
+      }
+    }
 }
 </script>
 

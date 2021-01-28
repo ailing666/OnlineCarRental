@@ -1,8 +1,8 @@
 .cars-list {
+  display: inline-block;
   .cars-item {
     height: 257px;
     width: 506px;
-    margin: auto;
     padding: 30px 30px 0;
     border-radius: 24px;
     background-color: $color-white;

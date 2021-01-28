@@ -30,7 +30,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 86px;
-  z-index: 11;
+  z-index: 10;
   text-align: center;
   
   li {
