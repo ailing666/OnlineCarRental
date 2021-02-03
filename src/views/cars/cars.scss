@@ -4,10 +4,11 @@
   bottom: 94px;
   right: 0;
   z-index: 11;
-}
+  
 .cars-swiper-wrap {
   position: relative;
   padding: 0 155px;
+
   .swiper-container { overflow: initial; }
   .swiper-button-prev,
   .swiper-button-next {
@@ -16,42 +17,52 @@
       height: 100px;
       margin-top: -50px;
       border-radius: 100px;
-      background-color: #fff;
+      background-color: $color-white;
       outline: none;
-      @include webkit(box-shadow, 0 0 18px 0 rgba(0, 0, 0, .2));
+      @include webkit(box-shadow, 0 0 18px 0 $color-shadow-2);
       @include webkit(transition, all .3s ease 0s);
+
       &.swiper-button-disabled { opacity: 1; }
+
       &:hover { 
           background-color: $color-main;
           &:after { border-top: 3px solid $color-blur; }
       }
+
       &:after {
           content: "";
           width: 14px;
           height: 14px;
-          border-top: 3px solid #000;
+          border-top: 3px solid $color-black;
       }
   }
+
   .swiper-button-prev { 
       left: 53px;
+
       &:after {
-          border-left: 3px solid #000;
+          border-left: 3px solid $color-black;
           margin-left: 5px;
           @include webkit(transform, rotate(-45deg));
       }
+      
       &:hover {
           &:after { border-left: 3px solid $color-blur; }
       }
   }
+
   .swiper-button-next { 
       right: 53px;
+
       &:after {
-          border-right: 3px solid #000;
+          border-right: 3px solid $color-black;
           margin-right: 5px;
           @include webkit(transform, rotate(45deg));
       }
+
       &:hover {
           &:after { border-right: 3px solid $color-blur; }
       }
   }
+}
 }

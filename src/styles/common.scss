@@ -3,8 +3,13 @@ $color-main: #34393f;
 $color-white: #fff;
 $color-border1: #e1e1e1;
 $color-border2: #d6d7d9;
+$color-shadow: rgba(0, 0, 0, .1);
 $color-shadow-2: rgba(0, 0, 0, .2);
 $color-blur: #b5dcf3;
+$color-black: #000;
+$border-blur: #0f9cee;
+$border-color: #f3f3f3;
+$border-color2: #e1e1e1;
 
 // 字体大小变量
 $f16: 16px;
@@ -12,6 +17,43 @@ $f14: 14px;
 $f18: 18px;
 $f22: 22px;
 $f26: 26px;
+
+/* color */
+.color-main { color: $color-main; }
+
+/* text-algin */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* float */
+.fr { float: right; }
+.fl { float: left; }
+
+/* font-size */
+.fs-24 { font-size: 24px; }
+
+/* position */
+.p-r { position: relative; }
+.p-a { position: absolute; }
+
+/* clearfix */
+.clearfix { @extend %clearfix; }
+
+/* common ui */
+.select-car-btn {
+  display: block;
+  width: 240px;
+  height: 84px;
+  margin: 0 17px;
+  border-radius: 100px;
+  line-height: 84px;
+  text-align: center;
+  color: $color-white;
+  font-size: 26px;
+  font-weight: 300;
+  background-color: $color-main;
+}
 /* 清除浮动 */
 %clearfix {
   &:after {

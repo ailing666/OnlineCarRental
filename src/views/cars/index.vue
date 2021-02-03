@@ -1,7 +1,8 @@
 <template>
   <div class="cars">
-  <swiper class="cars-swiper-wrap" :options="swiperOption">
-    <swiper-slide> <cars-list></cars-list> </swiper-slide>
+    <div class="cars-swiper-wrap">
+  <swiper  :options="swiperOption">
+    <swiper-slide> <cars-list  height="820px"></cars-list> </swiper-slide>
     <swiper-slide> <cars-list></cars-list> </swiper-slide>
     <swiper-slide> <cars-list></cars-list> </swiper-slide>
     <swiper-slide> <cars-list></cars-list> </swiper-slide>
@@ -10,6 +11,7 @@
     <div class="swiper-button-prev" slot="button-prev"></div>
     <div class="swiper-button-next" slot="button-next"></div>
   </swiper>
+  </div>
   </div>
 </template>
 
