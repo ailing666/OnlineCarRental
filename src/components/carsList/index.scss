@@ -61,7 +61,7 @@
             // 根据类名后缀的数字决定多少格电
             @for $i from 1 through 10 {
               &.active-li-#{$i}{
-                  li:nth-child(-n+#{$i}) { @include webkitA(background, linear-gradient(#17a8fa, #108dd9)); }
+                  li:nth-child(-n+#{$i}) { @include webkitA(background, linear-gradient(#17a8fa, $color-main-blur)); }
               }
             }
           }
@@ -178,7 +178,7 @@
         position: absolute;
         left: 0;
         top: 0;
-        background-color: $border-blur;
+        background-color: $color-main-blur;
         height: 100%;
         border-radius: 100px;
       }
@@ -209,7 +209,7 @@
         line-height: 43px;
 
         &.current {
-          border-color: $border-blur;
+          border-color: $color-main-blur;
         }
       }
   }
