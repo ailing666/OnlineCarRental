@@ -20,7 +20,11 @@ const routes = [
         name: "User",
         component: () =>
           import("@/views/user/index.vue")
-    }]
+    }, {
+      path: "/safe",
+      name: "Safe",
+      component: () => import("@/views/safe/index")
+    },]
   },{
     path: "/index",
     name: "Index",
